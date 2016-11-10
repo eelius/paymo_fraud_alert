@@ -23,7 +23,7 @@ public class paymoFraudCheck {
     
 	public static void main(String[] args) throws IOException {
 		
-		// Arguments to run the program: 2 input files and 3 output file names
+	// Arguments to run the program: 2 input files and 3 output file names
         if(args.length > 0) {
             File input1 = new File(args[0]);
             File input2 = new File(args[1]);
@@ -32,13 +32,13 @@ public class paymoFraudCheck {
             File fout3 = new File(args[4]);
 
         /**
-		 * calling the class usersNetwork to create a network 
-		 * with all users and their transactions history
-		 */
-		usersNetwork network = new usersNetwork();
+	* calling the class usersNetwork to create a network 
+	* with all users and their transactions history
+	*/
+	usersNetwork network = new usersNetwork();
 		
-		// variables to use when reading a .csv file
-		String line = "";
+	// variables to use when reading a .csv file
+	String line = "";
         String csvSplitBy = ",";
         boolean header=true;
  
@@ -50,14 +50,14 @@ public class paymoFraudCheck {
 			// reading the file line by line
 			while ((line = br.readLine()) != null) {
                 
-				// avoiding reading the first line (the header)
-				if (header==true) {
+			// avoiding reading the first line (the header)
+			if (header==true) {
                 	header=false;
                 	continue;
                 }
 				
-				// store the values of a line in variable 'values'
-				// values = [time, userA, userB, amount, message]
+		// store the values of a line in variable 'values'
+		// values = [time, userA, userB, amount, message]
             	String[] values = line.split(csvSplitBy);
             	
             	// if there the line (the transaction) has at least 
@@ -149,6 +149,6 @@ public class paymoFraudCheck {
 		 out2.close();
 		 out3.close();
 		} catch (Exception e) {} // catching errors writing output files
-    }
+	}
 	}
 }
