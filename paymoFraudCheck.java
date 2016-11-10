@@ -32,13 +32,13 @@ public class paymoFraudCheck {
             File fout3 = new File(args[4]);
 
         /**
-		 * calling the class usersNetwork to create a network 
-		 * with all users and their transactions history
-		 */
-		usersNetwork network = new usersNetwork();
+	* calling the class usersNetwork to create a network 
+	* with all users and their transactions history
+	*/
+	usersNetwork network = new usersNetwork();
 		
-		// variables to use when reading a .csv file
-		String line = "";
+	// variables to use when reading a .csv file
+	String line = "";
         String csvSplitBy = ",";
         boolean header=true;
  
@@ -50,14 +50,14 @@ public class paymoFraudCheck {
 			// reading the file line by line
 			while ((line = br.readLine()) != null) {
                 
-				// avoiding reading the first line (the header)
-				if (header==true) {
+			// avoiding reading the first line (the header)
+			if (header==true) {
                 	header=false;
                 	continue;
                 }
 				
-				// store the values of a line in variable 'values'
-				// values = [time, userA, userB, amount, message]
+		// store the values of a line in variable 'values'
+		// values = [time, userA, userB, amount, message]
             	String[] values = line.split(csvSplitBy);
             	
             	// if there the line (the transaction) has at least 
