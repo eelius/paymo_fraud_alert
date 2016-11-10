@@ -23,7 +23,7 @@ public class paymoFraudCheck {
     
 	public static void main(String[] args) throws IOException {
 		
-		// Arguments to run the program: 2 input files and 3 output file names
+	// Arguments to run the program: 2 input files and 3 output file names
         if(args.length > 0) {
             File input1 = new File(args[0]);
             File input2 = new File(args[1]);
@@ -149,6 +149,6 @@ public class paymoFraudCheck {
 		 out2.close();
 		 out3.close();
 		} catch (Exception e) {} // catching errors writing output files
-    }
+	}
 	}
 }
